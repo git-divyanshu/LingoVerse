@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Images/logolion.png">
+    <link rel="image_src" href="Images/logolion.png">
+    <meta itemprop="image" content="Images/logolion.png">
+    <link rel="stylesheet" href="loginstyle.css">
+    <script type="module" src="firebase_init.js"></script>
+    <link rel="canonical" href="https://lingoverse-37674.web.app/login.html">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4819267788985297"
+        crossorigin="anonymous"></script>
+    <script type="module" src="loginfirebase.js"></script>
+    <script type="text/javascript" src="loginjava.js" defer></script>
+    <title>LingoVerse Login</title>
+    <meta name="description"
+        content="LingoVerse: Unlock Your Language Potential. Learn languages with ease through interactive lessons, immersive exercises, and personalized learning plans. Explore a world of diverse languages and cultures, and enhance your communication skills effortlessly with LingoVerse.">
+
+</head>
+
+<body onload="is_loggedin()">
+    <div id="click-protector">
+        <div id="message_box">
+            <div id="message_text">Nothing To show in this Message!</div>
+            <button id="ok_message_btn" onclick="OK()">
+                <b>OK</b>
+            </button>
+        </div>
+    </div>
+    <div id="forms">
+        <a id="lingoverseimg" href="/">LingoVerse</a>
+        <h1 id="heading">Welcome to Lingoverse.</h1>
+        <h2 id="heading2">Your Journey Begins Here</h2>
+        <div class="form-group" id="login-form">
+            <form id="login-text">
+                <input type="email" id="emaillogin" name="email" placeholder="Email">
+                <br>
+                <input type="password" id="password" name="password" placeholder="Password">
+                <br>
+                <input type="submit" id="login" class="submit-btn" value="Login">
+                <p class="message">
+                    Forget Password?<br id="linechange">
+                    <a class="toggletext" onclick="password_reset()">Reset Password</a>
+                <div id="reset-pass-menu">
+                    <input type="email" id="email-pass-reset" name="email" placeholder="Enter your Email">
+                    <button id="sendresetpassmail" class="submit-btn" onclick="resetpassword()">Send Reset
+                        Mail</button>
+                </div>
+                </p>
+                <p class="message">
+                    Not registered?<br id="linechange">
+                    <a href="#" class="toggletext" onclick="toggleForm('R')">
+                        Create an account
+                    </a>
+                </p>
+            </form>
+        </div>
+        <div class="form-group" id="register-form">
+
+            <form id="register-text">
+
+                <input type="text" id="fullname" name="fullname" placeholder="Your Name">
+                <br>
+                <input type="email" id="email" name="email" placeholder="Email">
+                <br>
+                <input type="text" id="use" name="username" placeholder="Username">
+                <br>
+                <input type="password" id="pass" name="password" placeholder="Password">
+                <br>
+                <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm Password">
+                <br>
+                <select id="startlangmenu" name="startlang">
+                    <option value="Selectlang">Select a Language</option>
+                    <option value="hindi">Hindi</option>
+                    <option value="french">French</option>
+                    <option value="japanese">Japanese</option>
+                    <option value="chinese">Chinese</option>
+                    <option value="spanish">Spanish</option>
+                    <option value="tamil">Tamil</option>
+                    <option value="german">German</option>
+                    <option value="korean">Korean</option>
+                    <option value="russian">Russian</option>
+                    <option value="turkish">Turkish</option>
+                    <option value="portuguese">Portuguese</option>
+                    <option value="indonesian">Indonesian</option>
+                    <option value="italian">Italian</option>
+                </select>
+                <br>
+
+                <h5 id="pp"><input id="checkboxtnc_pp" type="checkbox" name="agree_tandc_pp" value="yes">
+                    Agree to <a href="TandC.html" target="_blank">T&C</a> and <a href="privacy_policy.html"
+                        target="_blank">Privacy Policy</a>.</h5>
+                <input type="submit" id="signup" class="submit-btn" value="Register">
+                <p class="message">
+                    Already registered?
+                    <a href="#" class="toggletext" onclick="toggleForm('L');is_loggedin();">Login here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

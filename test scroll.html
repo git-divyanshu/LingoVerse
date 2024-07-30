@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrollable Division with Hidden Scrollbar</title>
+    <style>
+        /* Styling for the scrollable container */
+        .scroll-container {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            overflow: hidden;
+            /* Hide the scrollbar */
+            position: relative;
+        }
+
+        /* Styling for the content inside the container */
+        .scroll-content {
+            padding: 10px;
+            /* Increase the width by the width of the scrollbar (17px) to compensate for the hidden scrollbar */
+            width: calc(100% + 17px);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scroll-container" id="scrollContainer">
+        <div class="scroll-content" id="content">
+            <!-- Initial content goes here -->
+            <p>Item 1</p>
+            <p>Item 2</p>
+            <p>Item 3</p>
+            <!-- Add more items here as needed -->
+        </div>
+    </div>
+
+    <script>
+        const scrollContainer = document.getElementById("scrollContainer");
+        const content = document.getElementById("content");
+
+        let isScrolling = false;
+
+        // Set up custom scrolling behavior
+        content.addEventListener("wheel", (e) => {
+            if (!isScrolling) {
+                isScrolling = true;
+                const deltaY = e.deltaY;
+                const scrollAmount = 50; // Adjust the scrolling speed as needed
+                const scrollDuration = 300; // Adjust the scrolling duration as needed
+
+                // Calculate the distance to scroll
+                const distance = deltaY > 0 ? scrollAmount : -scrollAmount;
+
+                // Scroll the content
+                const startTime = performance.now();
+                const startTop = content.scrollTop;
+                const animateScroll = (currentTime) => {
+                    const elapsedTime = currentTime - startTime;
+                    if (elapsedTime < scrollDuration) {
+                        content.scrollTop = startTop + (distance * elapsedTime) / scrollDuration;
+                        requestAnimationFrame(animateScroll);
+                    } else {
+                        content.scrollTop += distance;
+                        isScrolling = false;
+                    }
+                };
+                requestAnimationFrame(animateScroll);
+            }
+        });
+        function listAvailableLanguages() {
+            var voices = window.speechSynthesis.getVoices();
+
+            if (voices.length === 0) {
+                // Voices may not be available immediately, so listen for the 'voiceschanged' event.
+                window.speechSynthesis.onvoiceschanged = function () {
+                    voices = window.speechSynthesis.getVoices();
+                    displayLanguages(voices);
+                };
+            } else {
+                displayLanguages(voices);
+            }
+        }
+
+        function displayLanguages(voices) {
+            var languages = [];
+            for (var i = 0; i < voices.length; i++) {
+                languages.push(voices[i].lang);
+            }
+
+            // Remove duplicate languages (if any).
+            var uniqueLanguages = Array.from(new Set(languages));
+
+            console.log('Available Languages:');
+            console.log(uniqueLanguages);
+        }
+
+        // Call the function to list available languages.
+        listAvailableLanguages();
+
+
+    </script>
+    <script type="module">
+    </script>
+</body>
+
+</html>

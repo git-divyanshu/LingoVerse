@@ -1,0 +1,462 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+
+* {
+    margin: 0;
+    font-family: "Bruno Ace SC", sans-serif;
+    user-select: none;
+}
+
+body {
+    background-image: url("Images/lingovese.png");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+#lingoverseimg {
+    position: absolute;
+    top: -60px;
+    left: -10px;
+    color: rgb(255, 187, 0);
+    /* width: 200px;
+    height: 40px; */
+    cursor: pointer;
+    font-size: 20px;
+}
+
+#forms {
+    position: relative;
+    margin-top: 100px;
+    left: 150px;
+    width: 500px;
+}
+
+#heading {
+    position: relative;
+    width: 550px;
+    font-size: 45px;
+}
+#heading2{
+    font-size: 25px;
+}
+
+a {
+    color: rgb(255, 187, 0);
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+    color: rgb(255, 187, 0);
+}
+
+br {
+    height: 10px;
+}
+
+
+.form-group {
+    position: relative;
+    width: 400px;
+    height: 300px;
+    line-height: 35px;
+}
+
+::placeholder,
+.form-group select {
+    color: blue;
+    font-weight: 800;
+}
+
+#register-form {
+    margin-top: -10px;
+    height: 100%;
+    display: none;
+}
+
+.form-group input:not([type="submit"]):not([type="checkbox"]),
+.form-group select {
+    border: none;
+    background-color: transparent;
+    width: 350px;
+    height: 35px;
+    border-bottom: 2px black solid;
+    font-size: 15px;
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+
+}
+
+input.custom-autofill {
+    font-family: "Bruno Ace SC", sans-serif;
+    font-size: 15px;
+
+}
+
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+}
+
+#linechange {
+    display: none;
+}
+
+
+
+.submit-btn {
+    background-color: rgba(22, 21, 31, 0.934);
+    border: none;
+    color: rgb(255, 187, 0);
+    cursor: pointer;
+    font-weight: bold;
+    width: 80%;
+    height: 45px;
+    border-radius: 8px;
+    font-size: 15px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    justify-content: center;
+}
+
+.submit-btn:hover {
+    background-color: rgb(255, 187, 0);
+    color: rgba(22, 21, 31, 0.934);
+}
+
+
+#login-text,
+#register-text {
+    justify-content: center;
+    /* padding-left: 50px; */
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+
+
+.message {
+    font-size: 15px;
+    line-height: 20px;
+}
+
+#reset-pass-menu {
+    display: none;
+}
+
+.toggletext {
+    text-decoration: none;
+    color: rgb(255, 187, 0);
+    cursor: pointer;
+}
+
+.toggletext:hover {
+    color: rgba(22, 21, 31, 0.934);
+}
+
+
+/* Message Box */
+
+#click-protector {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.084);
+    display: none;
+}
+
+#message_box {
+    position: relative;
+    width: 450px;
+    height: 250px;
+    color: rgba(22, 21, 31, 0.934);
+    background-color: rgb(255, 187, 0);
+    z-index: 4;
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.626);
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    padding: 25px;
+}
+
+#ok_message_btn {
+    position: absolute;
+    color: rgb(255, 187, 0);
+    background-color: rgba(22, 21, 31, 0.934);
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    text-align: center;
+    width: 200px;
+    height: 30px;
+}
+
+#ok_message_btn:hover {
+    color: rgba(22, 21, 31, 0.934);
+    background-color: rgb(255, 187, 0);
+}
+
+#message_text {
+    line-height: 30px;
+    height: 100%;
+    width: 100%;
+    word-wrap: break-word;
+    text-align: center;
+    position: relative;
+    font-size: 13px;
+    padding: 10px;
+}
+
+/* Message Box ends */
+
+
+
+/* Responsive Styles */
+
+@media (max-width: 768px) {
+
+    /* Styles for screens smaller than 768px */
+
+
+    body {
+        background-image: none;
+        position: relative;
+    }
+
+    #forms {
+        position: relative;
+        margin-left: 20%;
+        left: 0;
+        width: 440px;
+    }
+
+    #lingoverseimg {
+        color: rgb(255, 187, 0);
+        text-decoration: none;
+        font-size: 20px;
+        font-weight: 800;
+        top: -50px;
+        position: relative;
+        left: 0px;
+    }
+
+    #heading {
+        font-size: 30px;
+        width: 440px;
+    }
+
+    #heading2 {
+        font-size: 15px;
+        width: 440px;
+    }
+
+    #forms {
+        position: relative;
+        margin-top: 100px;
+    }
+
+    .form-group {
+        width: 350px;
+    }
+
+    .form-group input:not([type="submit"]):not([type="checkbox"]),
+    .form-group select {
+        width: 300px;
+        font-size: 14px;
+    }
+
+    #pp {
+        font-size: 12px;
+    }
+    #checkboxtnc_pp{
+        margin-top: 12px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .submit-btn {
+        font-size: 13px;
+        margin-top: 20px;
+        margin-bottom: 15px;
+        width: 80%;
+        height: 40px;
+    }
+
+    #message_box {
+        width: 400px;
+        height: 222.22px;
+    }
+}
+
+@media (max-width: 570px) {
+
+    #lingoverseimg {
+        font-size: 20px;
+    }
+
+    #heading {
+        font-size: 30px;
+        width: 350px;
+    }
+
+    #heading2 {
+        font-size: 15px;
+        width: 350px;
+    }
+
+    #forms {
+        position: relative;
+        margin-top: 100px;
+        width: 350px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    /* Styles for screens smaller than 480px */
+
+    /* #forms {
+        margin-left: 20px;
+    } */
+
+    #lingoverseimg {
+        font-size: 15px;
+    }
+
+    #heading {
+        width: 300px;
+        font-size: 40px;
+    }
+
+    #heading2 {
+        width: 300px;
+        font-size: 15px;
+    }
+
+    #forms {
+        margin-top: 100px;
+        width: 300px;
+    }
+
+    .form-group {
+        width: 300px;
+    }
+
+    .form-group input:not([type="submit"]):not([type="checkbox"]),
+    .form-group select {
+        width: 250px;
+        font-size: 12px;
+    }
+
+    #pp {
+        font-size: 10px;
+    }
+    #checkboxtnc_pp{
+        margin-top: 10px;
+        width: 10px;
+        height: 10px;
+    }
+
+    .submit-btn {
+        font-size: 11px;
+        margin-top: 15px;
+        margin-bottom: 10px;
+        width: 80%;
+        height: 35px;
+    }
+
+    .message {
+        font-size: 13px;
+        line-height: 15px;
+    }
+
+    .toggletext {
+        text-decoration: none;
+        color: rgb(255, 187, 0);
+        cursor: pointer;
+        font-size: 13px;
+    }
+
+    #message_box {
+        width: 300px;
+        height: 166.66px;
+    }
+
+    #ok_message_btn {
+        bottom: -70%;
+    }
+}
+
+@media (max-width: 368px) {
+
+    /* #forms {
+        margin-left: 20px;
+    } */
+
+    #lingoverseimg {
+        font-size: 10px;
+    }
+
+    #heading {
+        width: 200px;
+        font-size: 25px;
+    }
+
+    #heading2 {
+        width: 200px;
+        font-size: 12px;
+    }
+
+    #forms {
+        margin-top: 100px;
+        margin-left: 10%;
+        width: 200px;
+    }
+
+    .form-group {
+        width: 200px;
+    }
+
+    #linechange {
+        display: block;
+    }
+
+    .form-group input:not([type="submit"]):not([type="checkbox"]),
+    .form-group select {
+        width: 210px;
+        font-size: 10px;
+    }
+
+    #pp {
+        font-size: 8px;
+    }
+    #checkboxtnc_pp{
+        margin-top: 8px;
+        width: 8px;
+        height: 8px;
+    }
+
+    .submit-btn {
+        font-size: 10px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        width: 80%;
+        height: 30px;
+    }
+
+    .message {
+        font-size: 10px;
+    }
+
+    .toggletext {
+        text-decoration: none;
+        color: rgb(255, 187, 0);
+        cursor: pointer;
+        font-size: 10px;
+    }
+}
