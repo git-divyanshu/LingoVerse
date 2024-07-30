@@ -1,3 +1,4 @@
+<h1> LingoVerse</h1>
 Welcome to LingoVerse! This project is a comprehensive platform designed to facilitate language learning through interactive tutorials.
 Built using JavaScript and Firebase, the website offers users an engaging and dynamic experience. Our interactive tutorials are designed to cater to various learning styles.
 Firebase is utilized for seamless data management, user authentication, and real-time updates, ensuring a smooth and personalized learning journey.
